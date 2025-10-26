@@ -1,0 +1,57 @@
+@font-face {
+    font-family: chacha;
+    src: url(./Asst/Fonts/Evil\ Empire.otf);
+}
+
+@font-face {
+    font-family: goliu;
+    src: url(./Asst/Fonts/defused.ttf);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html,body{
+height: 100%;
+width: 100%;
+}
+
+/* main part starts from here */
+
+main{
+    height: 100%;
+    width: 100%;
+    padding: 2% 0%;
+}
+
+/* nav starts from here */
+#nav{
+   border-bottom: 2px solid black;
+   border-top: 2px solid black;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+#nav a{
+    color: #BF092F;
+    text-decoration: none;
+    font-family: chacha;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+#nav a:hover{
+    color: black; 
+    border-bottom: 2px solid #BF092F;   
+}
+
+#nav h2{
+    font-size: 4vh;
+    font-weight: 700;
+    font-family: goliu;
+    margin: 0% 15%;
+}
