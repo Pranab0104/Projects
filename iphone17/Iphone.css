@@ -2,12 +2,10 @@
   font-family: iphone;
   src: url(./Asst/apple.woff2);
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: iphone; */
 }
 
 html,
@@ -22,64 +20,54 @@ main {
   background: #2c2a2a;
 }
 
-/* header section starts here */
-
 header {
   height: 5%;
-  background-color: rgb(0, 0, 0);
+  background-color: #000;
   font-size: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2%;
 }
-
-a {
-  color: #ffffff;
-  font-family: iphone;
+header a {
+  color: #fff;
+  font-family: "iphone", sans-serif;
   text-decoration: none;
   font-weight: 100;
 }
-
-a:hover {
+header a:hover {
   border-bottom: 2px solid darkorange;
 }
-
-i {
-  color: #ffffff;
-  font-family: iphone;
+header i {
+  color: #fff;
+  font-family: "iphone", sans-serif;
 }
-
-i:hover {
+header i:hover {
   cursor: pointer;
   background: #ece9e9;
   color: #000;
   border-radius: 3px;
 }
 
-/* section1 starts from here */
-
 .section1 {
   position: relative;
   width: 100%;
-  height: 95vh; /* fills the screen below header */
+  height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: #000000; /* keeps black background clean */
-  margin-top: 0;
-  padding: 0;
+  background: #000;
 }
-
 .section1 video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* keeps the video proportional and fills section */
-  object-position: center; /* centers the main focus of the video */
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   display: block;
 }
-
 .section1 .contain {
   position: absolute;
   top: 85%;
@@ -87,19 +75,17 @@ i:hover {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
 }
-
 .section1 .contain h1 {
   font-size: 2vw;
   font-weight: 600;
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
-
 .section1 .contain button {
   background-color: #0071e3;
-  color: white;
+  color: #fff;
   border: none;
   padding: 12px 24px;
   border-radius: 50px;
@@ -109,284 +95,187 @@ i:hover {
   margin-bottom: 3%;
 }
 
-/* section2 starts from here */
-
 .section2 {
   position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column; /* stack .top and .bot vertically */
-  justify-content: center; /* center vertically */
-  align-items: center; /* center horizontally */
-  gap: 40px; /* <— space between .top and .bot */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   background-color: #2c2b2b;
   color: #fff;
   padding: 2%;
 }
-
 .section2 .top {
   width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* one left, one right */
+  justify-content: space-between;
   margin: 0 auto;
   background-color: transparent;
 }
-
 .section2 .top h1 {
   font-size: 8vh;
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
   font-weight: 600;
-  color: #fff;
 }
-
 .section2 .top h3 {
   font-size: 3vh;
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
   font-weight: 500;
   color: #267acd;
   display: flex;
   align-items: center;
-  gap: 8px; /* space between text and icon */
+  gap: 8px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
 .section2 .top h3:hover {
-  color: #5ca9ff; /* lighter blue on hover */
+  color: #5ca9ff;
 }
-
 .section2 .top i {
   font-size: 3vh;
 }
-
 .section2 .bot {
   width: 90%;
   height: 100%;
-  /* background-color: crimson; */
   border-radius: 20px;
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
-  position: relative;
   gap: 5%;
 }
-
-.section2 .bot #vid1,
-.section2 .bot #vid2,
-.section2 .bot #vid3,
-.section2 .bot #vid4 {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.section2 .bot video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  display: block;
-}
-
-.section2 .bot #vid5,
-.section2 .bot #vid6 {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
+.section2 .bot video,
 .section2 .bot img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
   display: block;
 }
-
-.section2 .bot #vid1 h2,
-.section2 .bot #vid2 h2,
-.section2 .bot #vid3 h2,
-.section2 .bot #vid4 h2 {
+.section2 .bot div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.section2 .bot div h2 {
   position: absolute;
   top: 4%;
   left: 50%;
   transform: translateX(-50%);
-  color: #ffffff;
-  font-family: iphone;
+  color: #fff;
+  font-family: "iphone", sans-serif;
   font-size: 4vh;
   font-weight: 600;
   text-align: center;
   background: rgba(0, 0, 0, 0.4);
   padding: 12px 20px;
   border-radius: 12px;
-  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   z-index: 2;
 }
-
-.section2 .bot #vid5 h2,
-.section2 .bot #vid6 h2 {
-  position: absolute;
-  top: 4%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #ffffff;
-  font-family: iphone;
-  font-size: 4vh;
-  font-weight: 600;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 12px 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  z-index: 2;
-}
-
-.bot::-webkit-scrollbar {
+.section2 .bot::-webkit-scrollbar {
   background-color: rgb(227, 221, 222);
   border-radius: 10px;
 }
-
-.bot::-webkit-scrollbar-thumb {
-  background-color: rgba(246, 119, 1);
-  border-radius: 10px;
-}
-
-.bot::-webkit-scrollbar-thumb:hover {
+.section2 .bot::-webkit-scrollbar-thumb {
   background-color: rgb(246, 119, 1);
   border-radius: 10px;
-  border: 2px solid black;
 }
-
-/* section3 starts from here */
+.section2 .bot::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(246, 119, 1);
+  border: 2px solid #000;
+}
 
 .section3 {
   height: 100vh;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: #000;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-
 .section3 .contain {
-  /* padding: 10%; */
-  margin-top: 5%;
+  margin-top: 2%;
   height: 100%;
   width: 100%;
-  background-color: transparent;
   display: grid;
-  gap: 5%;
-  grid-area: "hero" "oreo1" "ore2" "oreo3" "ore4";
-  /* align-items: center;
-  justify-content: center; */
+  gap: 2%;
 }
-
-.section3 .contain .hero1 {
-  height: 5vh;
-  width: 100%;
-  background-color: transparent;
-  grid-template-columns: "hero";
-}
-
 .section3 .contain .hero1 h3 {
-  /* padding: 50%; */
   font-size: 4vh;
   color: darkorange;
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
 }
-
 .section3 .contain .hero2 {
-  height: 20vh;
-  width: 100%;
-  background-color: transparent;
-  grid-template-rows: "oreo2";
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .section3 .contain .hero2 h1 {
   width: 56%;
   font-size: 8vh;
-  color: white;
-  font-family: iphone;
+  color: #fff;
+  font-family: "iphone", sans-serif;
 }
-
 .section3 .contain .hero3 {
-  height: 10vh;
-  width: 100%;
-  background-color: transparent;
-  grid-template-rows: "oreo3";
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .section3 .contain .hero3 p {
   width: 62%;
   font-size: 3vh;
   color: rgb(178, 170, 170);
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
 }
-
 .section3 .contain .hero4 {
-  height: 55vh;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  grid-template-rows: "oreo4";
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-
 .section3 .contain .hero4 video {
-  height: 100%;
-  width: 70%;
-  object-fit: cover;
+  height: 78%;
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-/* section4 starts here */
 .section4 {
-  margin-top: 5%;
+  margin-top: 0%;
   position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column; /* stack .top and .bot vertically */
-  justify-content: center; /* center vertically */
-  align-items: center; /* center horizontally */
-  gap: 40px; /* <— space between .top and .bot */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   background-color: #2c2b2b;
   color: #fff;
   padding: 2%;
 }
-
 .section4 .top {
   width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* one left, one right */
+  justify-content: space-between;
   margin: 0 auto;
-  background-color: transparent;
 }
-
 .section4 .top h1 {
   font-size: 8vh;
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
   font-weight: 600;
-  color: #fff;
 }
-
 .section4 .bot {
   width: 80%;
   height: 75%;
@@ -395,22 +284,18 @@ i:hover {
   align-items: center;
   position: relative;
 }
-
 .section4 .bot #vid1 {
-  position: relative;
   width: 100%;
   height: 100%;
 }
-
 .section4 .bot img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
-  display: block;
 }
-
-.feature-list {
+.section4 .feature-list {
   position: absolute;
   top: 12%;
   left: 5%;
@@ -420,29 +305,34 @@ i:hover {
   list-style: none;
   z-index: 2;
 }
-
-.feature-list li {
+.section4 .feature-list li {
   display: flex;
   align-items: center;
   gap: 10px;
   background: rgba(20, 20, 20, 0.9);
   color: #fff;
-  font-family: iphone, sans-serif;
+  font-family: "iphone", sans-serif;
   font-size: 2.5vh;
   font-weight: 600;
   padding: 10px 25px;
   border-radius: 50px;
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
-.feature-list li:hover {
+.section4 .feature-list li:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: translateX(5px);
 }
-
-.feature-list li .icon {
+.section4 .feature-list li.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+.section4 .feature-list li.active .icon {
+  background: #ff6600;
+  border: none;
+}
+.section4 .feature-list li .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,202 +342,138 @@ i:hover {
   background: transparent;
   border: 2px solid #fff;
   font-size: 16px;
-  line-height: 1;
 }
-
-.feature-list li.active .icon {
-  background: #ff6600; /* orange dot */
-  border: none;
-  content: "";
-}
-
-.feature-list li.active {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* section5 starts from here */
 
 .section5 {
-  /* font-size: 8vh; */
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
   height: 100%;
   width: 100%;
-  text-align: center;
+  background-color: #000;
   display: flex;
   flex-direction: column;
-  background-color: #000;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-
-.section5 h4{
-  font-family: iphone;
-   font-size: 5vh; 
-   color: #ff7f00;
-  /* margin-top: 3%; */
+.section5 h4 {
+  font-size: 5vh;
+  color: #ff7f00;
   width: 100%;
   height: 8vh;
-  background-color: transparent;
 }
-
-.section5 h1{
-  font-family: iphone;
+.section5 h1 {
   font-size: 9vh;
+  color: #ece9e9;
   width: 100%;
   height: 15vh;
-  background-color: transparent;
-  color: #ece9e9;
 }
-
 .section5 .down {
   display: flex;
   justify-content: space-evenly;
-  /* background: crimson; */
   align-items: center;
-  /* gap: 30%; */
-  flex-wrap: wrap; /* for responsiveness */
+  flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
 }
-
-/* Image Section */
 .section5 .down .bottom1 {
   flex: 1;
   overflow: hidden;
   border-radius: 12px;
-  /* background-color: #751111; */
 }
-
 .section5 .down .bottom1 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* makes image cover the div */
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-/* Text Section */
 .section5 .down .bottom2 {
   flex: 0.6;
   min-width: 250px;
   text-align: left;
   margin-left: 10%;
 }
-
 .section5 .down .bottom2 h2 {
-  color: #ff7f00; /* Apple’s orange tone */
+  color: #ff7f00;
   font-size: 48px;
   margin: 5px 0;
 }
-
 .section5 .down .bottom2 h5 {
   color: #bbb;
   font-size: 18px;
   margin: 5px 0;
 }
 
-/* section6 starts from here */
-
-.section6{
+.section6 {
   width: 100%;
   background-color: #000;
   color: #8d8b8b;
   text-align: center;
   display: flex;
   padding: 6%;
-  position: relative;
   align-items: center;
   justify-content: center;
 }
-
-.section6 .box{
-  position: relative;
+.section6 .box {
   height: 100vh;
   width: 72%;
-  align-items: center;
-  justify-content: center;
 }
-
-.section6 .box p{
+.section6 .box p {
   margin-top: 8vh;
-  position: relative;
   font-size: 2.9vh;
-  font-family: iphone;
+  font-family: "iphone", sans-serif;
 }
-
-.section6 .box p span{
-  position: relative;
-  font-size: 2.9vh;
-  font-family: iphone;
-  color: white;
+.section6 .box p span {
+  color: #fff;
 }
-
-.section6 .box .innerbox{
-  position: relative;
-  top: 0%;
-  left: 10%;
+.section6 .box .innerbox {
   margin-top: 6%;
   height: 60%;
   width: 70%;
-  /* background-color: crimson; */
   border-radius: 15px;
   overflow: hidden;
-  align-items: center;
+  margin-left: 10%;
 }
-
-.section6 .box .innerbox img{
-  /* background-color: crimson; */
-  position: relative;
-  border-radius: 15px;
+.section6 .box .innerbox img {
   height: 100%;
   width: 100%;
+  border-radius: 15px;
 }
 
-/* section7 starts from here */
 .section7 {
-  position: relative;     /* stay in normal document flow */
+  position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: black; /* fallback color */
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .section7 .dabba {
-  position: relative;
   width: 100%;
   height: 100%;
+  position: relative;
 }
-
 .section7 video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* fills section fully */
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: 1;
 }
-
 .section7 h3 {
   position: relative;
   z-index: 2;
   color: rgb(138, 133, 133);
-  text-align: center;
   font-size: 1.5rem;
-  line-height: 1.4;
   font-weight: 400;
-  font-family: iphone;
-}
-
-.section7 h3 span{
-  position: relative;
-  z-index: 2;
-  color: rgb(255, 255, 255);
+  font-family: "iphone", sans-serif;
   text-align: center;
-  font-size: 1.5rem;
   line-height: 1.4;
-  font-weight: 400;
-  font-family: iphone;
 }
+.section7 h3 span {
+  color: #fff;
+}/*# sourceMappingURL=iphone.css.map */
